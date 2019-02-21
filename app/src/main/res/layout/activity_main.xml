@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appBaslik"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.075" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" android:textSize="24sp" android:textStyle="bold"
+            android:id="@+id/tvBaslik" android:fontFamily="casual"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etKiloGir" android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="88dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvBaslik" android:hint="Dünyadaki kilon nedir"
+            app:layout_constraintHorizontal_bias="1.0"/>
+    <Button
+            android:text="HESAPLA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHesapla" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" app:layout_constraintTop_toBottomOf="@+id/etKiloGir"
+            android:background="@android:color/holo_orange_light" android:textColor="@android:color/white"/>
+    <TextView
+            android:text="SONUC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/etKiloGir" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:textSize="24sp" android:textColor="@android:color/holo_blue_light" android:id="@+id/tvSonuc"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <CheckBox
+            android:text="Mars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbMars" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp" app:layout_constraintTop_toBottomOf="@+id/tvBaslik"
+            app:layout_constraintEnd_toStartOf="@+id/cbVenus" android:layout_marginEnd="8dp" tools:text="Mars"
+            android:checked="false"/>
+    <CheckBox
+            android:text="Venüs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbVenus" app:layout_constraintStart_toEndOf="@+id/cbMars"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/cbJupiter"
+            android:layout_marginEnd="8dp" android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvBaslik" tools:text="Venüs"/>
+    <CheckBox
+            android:text="Jupiter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbJupiter" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/tvBaslik"
+            app:layout_constraintStart_toEndOf="@+id/cbVenus" android:layout_marginStart="8dp" tools:text="Jupiter"/>
+    <ImageView
+            android:layout_width="346dp"
+            android:layout_height="144dp" app:srcCompat="@drawable/uzay" tools:layout_editor_absoluteY="0dp"
+            android:id="@+id/imageView" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
